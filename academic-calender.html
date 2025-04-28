@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Academic Calendar - MediCaps University</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #2e1515;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    .header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-left img {
+      height: 42px;
+      margin-right: 12px;
+    }
+
+    .header-left h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #1d3557;
+    }
+
+    .logout-btn {
+      text-decoration: none;
+      padding: 6px 12px;
+      background-color: #e53935;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #c62828;
+    }
+
+    /* Calendar Heading Box (Below Header) */
+    .calendar-heading {
+      background: #ffffff;
+      padding: 25px;
+      text-align: center;
+      border-bottom: 3px solid #457b9d;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      margin-bottom: 30px;
+    }
+
+    .calendar-heading h1 {
+      font-size: 32px;
+      margin: 0;
+      color: #1d3557;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Main Content */
+    .calendar-container {
+      text-align: center;
+      padding: 0 20px 50px;
+    }
+
+    .calendar-img {
+      max-width: 90%;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .calendar-img:hover {
+      transform: scale(1.015);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .calendar-heading h1 {
+        font-size: 24px;
+      }
+
+      .logout-btn {
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <img src="./Assets:Images/medicapsuniversity.jpeg" alt="MediCaps Logo">
+      <h2>MediCaps University</h2>
+    </div>
+    <a href="./login.html" class="logout-btn">Log Out</a>
+  </div>
+
+  <!-- Heading Below Header -->
+  <div class="calendar-heading">
+    <h1>📅 Academic Calendar 2024–25</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div class="calendar-container">
+    <a href="./Assets:Images/academic-calender.png" target="_blank">
+      <img src="./Assets:Images/academic-calender.png" alt="Academic Calendar" class="calendar-img">
+    </a>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Medicaps University - Online Student Information System
+  </div>
+
+</body>
+
+</html>

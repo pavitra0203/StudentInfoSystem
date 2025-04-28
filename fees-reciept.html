@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fees Receipt - MediCaps University</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #2e1515;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    .header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-left img {
+      height: 42px;
+      margin-right: 12px;
+    }
+
+    .header-left h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #1d3557;
+    }
+
+    .logout-btn {
+      text-decoration: none;
+      padding: 6px 12px;
+      background-color: #e53935;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #c62828;
+    }
+
+    /* Title */
+    .page-title {
+      background-color: #ffffff;
+      padding: 25px;
+      text-align: center;
+      border-bottom: 3px solid #457b9d;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      margin-bottom: 30px;
+    }
+
+    .page-title h1 {
+      font-size: 32px;
+      margin: 0;
+      color: #1d3557;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 0 20px 50px;
+    }
+
+    .form-box,
+    .receipt-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-box h2,
+    .receipt-box h2 {
+      text-align: center;
+      color: #36598a;
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      transition: border 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: #457b9d;
+      outline: none;
+      box-shadow: 0 0 6px rgba(69, 123, 157, 0.2);
+    }
+
+    .receipt-details p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .receipt-details strong {
+      color: #222;
+    }
+
+    .submit-btn {
+      background-color: #457b9d;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #1d3557;
+    }
+
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <img src="./Assets:Images/medicapsuniversity.jpeg" alt="MediCaps Logo">
+      <h2>MediCaps University</h2>
+    </div>
+    <a href="./login.html" class="logout-btn">Log Out</a>
+  </div>
+
+  <!-- Title -->
+  <div class="page-title">
+    <h1>🧾 Fees Receipt</h1>
+  </div>
+
+  <!-- Input + Receipt Preview -->
+  <div class="container">
+
+    <!-- Form Input -->
+    <div class="form-box">
+      <h2>Enter Fee Details</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Student Name:</label>
+          <input type="text" id="name" placeholder="Pavitra Singh">
+        </div>
+        <div class="form-group">
+          <label for="roll">Roll Number:</label>
+          <input type="text" id="roll" placeholder="EN23CS301722">
+        </div>
+        <div class="form-group">
+          <label for="branch">Branch:</label>
+          <input type="text" id="branch" placeholder="Computer Science">
+        </div>
+        <div class="form-group">
+          <label for="semester">Semester:</label>
+          <input type="text" id="semester" placeholder="4th">
+        </div>
+        <div class="form-group">
+          <label for="date">Payment Date:</label>
+          <input type="text" placeholder="2025-04-10" readonly>
+        </div>
+        <div class="form-group">
+          <label for="mode">Payment Mode:</label>
+          <input type="text" id="mode" placeholder="Online / UPI / Bank">
+        </div>
+        <div class="form-group">
+          <label for="txn">Transaction ID:</label>
+          <input type="text" id="txn" placeholder="TXN123456789">
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount Paid:</label>
+          <input type="text" id="amount" placeholder="₹82,500">
+        </div>
+        <button class="submit-btn" type="button" onclick="location.href='#preview-receipt'">Generate Preview</button>
+      </form>
+    </div>
+
+    <!-- Preview (Static for now) -->
+    <div class="receipt-box" id="preview-receipt">
+      <h2>Preview Receipt</h2>
+      <div class="receipt-details">
+        <p><strong>Student Name:</strong> Pavitra Singh</p>
+        <p><strong>Roll Number:</strong> EN3CS301722</p>
+        <p><strong>Branch:</strong> Computer Science</p>
+        <p><strong>Semester:</strong> 4th</p>
+        <p><strong>Payment Date:</strong> 2025-04-10</p>
+        <p><strong>Payment Mode:</strong> UPI</p>
+        <p><strong>Transaction ID:</strong> TXN123456789</p>
+        <p><strong>Amount Paid:</strong> ₹82,500</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Medicaps University - Online Student Information System
+  </div>
+
+
+</body>
+
+</html>

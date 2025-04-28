@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Medicaps University</title>
+    <style>
+        html,
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #2e1515;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            /* Vertically center the image and text */
+            justify-content: center;
+            /* Horizontally center the whole logo block */
+            gap: 20px;
+            /* Space between image and text */
+            margin-bottom: 10px;
+        }
+
+        .logo h1 {
+            font-size: 40px;
+            margin: 0;
+            color: white;
+            /* color: #b99d9d; */
+        }
+
+        .main-container {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            margin: 30px auto;
+            gap: 30px;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .quick-links,
+        .login-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 45%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-links h3,
+        .login-box h3 {
+            margin-top: 0;
+        }
+
+        .quick-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .quick-links li {
+            margin: 10px 0;
+        }
+
+        .quick-links a {
+            text-decoration: none;
+            color: #1565C0;
+        }
+
+        .login-box input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .login-btn {
+            text-decoration: none;
+            padding: 6px 12px;
+            background-color: #1565C0;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #2e1515;
+        }
+
+
+
+        .notice {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="./Assets:Images/medicapslogo.svg" alt="University Logo" class="logo-img">
+            <h1>MediCaps<br> University</h1>
+        </div>
+        <h2>Online Student Information System</h2>
+    </div>
+
+    <div class="main-container">
+        <div class="quick-links">
+            <h3>🔗 Quick Links</h3>
+            <ul>
+                <li><a href="#">University Website</a></li>
+                <li><a href="#">Library Website</a></li>
+                <li><a href="#">E-learning Portal</a></li>
+                <li><a href="#">Student Help Desk</a></li>
+            </ul>
+        </div>
+
+        <div class="login-box">
+            <h3>Sign in to Student Info System</h3>
+            <form>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <br>
+                <a href="./home.html" class="login-btn">Login</a>
+            </form>
+
+            <p class="notice">
+                For technical support or login help, please contact the registrar at:
+                <a href="mailto:registrar@medicaps.ac.in">registrar@medicaps.ac.in</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Medicaps University - Online Student Information System
+    </div>
+</body>
+
+</html>

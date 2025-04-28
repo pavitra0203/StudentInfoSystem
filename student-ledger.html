@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student Ledger - MediCaps University</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #2e1515;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    .header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-left img {
+      height: 42px;
+      margin-right: 12px;
+    }
+
+    .header-left h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #1d3557;
+    }
+
+    .logout-btn {
+      text-decoration: none;
+      padding: 6px 12px;
+      background-color: #e53935;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #c62828;
+    }
+
+    /* Title Section */
+    .page-title {
+      background-color: #ffffff;
+      padding: 25px;
+      text-align: center;
+      border-bottom: 3px solid #457b9d;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      margin-bottom: 30px;
+    }
+
+    .page-title h1 {
+      font-size: 32px;
+      margin: 0;
+      color: #1d3557;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Ledger Table */
+    .ledger-container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table thead {
+      background-color: #457b9d;
+      color: white;
+    }
+
+    th,
+    td {
+      padding: 14px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f9ff;
+    }
+
+    th {
+      font-size: 16px;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .balance {
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    @media (max-width: 768px) {
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td::before {
+        position: absolute;
+        left: 20px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #555;
+      }
+
+      td:nth-of-type(1)::before {
+        content: "Date";
+      }
+
+      td:nth-of-type(2)::before {
+        content: "Transaction ID";
+      }
+
+      td:nth-of-type(3)::before {
+        content: "Description";
+      }
+
+      td:nth-of-type(4)::before {
+        content: "Amount";
+      }
+
+      td:nth-of-type(5)::before {
+        content: "Balance";
+      }
+    }
+
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <img src="./Assets:Images/medicapsuniversity.jpeg" alt="MediCaps Logo">
+      <h2>MediCaps University</h2>
+    </div>
+    <a href="./login.html" class="logout-btn">Log Out</a>
+  </div>
+
+  <!-- Title -->
+  <div class="page-title">
+    <h1>📒 Student Ledger</h1>
+  </div>
+
+  <!-- Ledger Table -->
+  <div class="ledger-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Transaction ID</th>
+          <th>Description</th>
+          <th>Amount (₹)</th>
+          <th>Balance (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025-01-10</td>
+          <td>TXN001234</td>
+          <td>Semester 1 Fees</td>
+          <td>₹40,000</td>
+          <td class="balance">₹40,000</td>
+        </tr>
+        <tr>
+          <td>2025-06-15</td>
+          <td>TXN002567</td>
+          <td>Semester 2 Fees</td>
+          <td>₹40,000</td>
+          <td class="balance">₹80,000</td>
+        </tr>
+        <tr>
+          <td>2026-01-08</td>
+          <td>TXN003982</td>
+          <td>Semester 3 Fees</td>
+          <td>₹42,000</td>
+          <td class="balance">₹122,000</td>
+        </tr>
+        <tr>
+          <td>2026-06-12</td>
+          <td>TXN004335</td>
+          <td>Semester 4 Fees</td>
+          <td>₹42,000</td>
+          <td class="balance">₹164,000</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Medicaps University - Online Student Information System
+  </div>
+
+</body>
+
+</html>

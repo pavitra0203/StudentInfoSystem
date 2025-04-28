@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #2e1515;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left img {
+            height: 42px;
+            margin-right: 12px;
+        }
+
+        .header-left h2 {
+            text-decoration: none;
+            margin: 0;
+            font-size: 24px;
+            color: #1d3557;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            max-width: 1000px;
+            margin: 30px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-title {
+            background-color: #ffffff;
+            text-decoration: none;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 3px solid #457b9d;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+            margin-bottom: 30px;
+        }
+
+        .page-title h1 {
+            font-size: 30px;
+            text-decoration: none;
+            margin: 0;
+            color: #1d3557;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a148c;
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: #147e8c;
+            text-decoration: underline;
+        }
+
+        .logout-btn {
+            text-decoration: none;
+            padding: 6px 12px;
+            background-color: #e53935;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #c62828;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .form-section {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 15px;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-left">
+            <img src="./Assets:Images/medicapsuniversity.jpeg" alt="MediCaps Logo">
+            <h2>MediCaps University</h2>
+        </div>
+        <a href="./login.html" class="logout-btn">Log Out</a>
+    </div>
+
+    <div class="page-title">
+        <h1>🎓 Student's Profile</h1>
+    </div>
+
+    <div class="container">
+        <!-- <h1>Student Profile<br></h1> -->
+
+        <h2>Personal Information</h2>
+
+        <label>Student's Name</label>
+        <input type="text" value="PAVITRA SINGH">
+        <hr>
+        <label>Permanent Address</label>
+        <input type="text" value="VILLAGE- KHAIRADA, POST- GOYRA MUGLI, DISTRICT- BANDA, U.P">
+        <label>Current Address</label>
+        <input type="text" value="PALASH PARISHAR, SILICON CITY, INDORE, M.P">
+        <hr>
+        <label>Category</label>
+        <select>
+            <option selected>GEN</option>
+            <option>OBC</option>
+            <option>SC</option>
+            <option>ST</option>
+        </select>
+        <label>Gender</label>
+        <input type="text" value="Male">
+        <label>Blood Group</label>
+        <input type="text" value="B+">
+        <hr>
+        <label>Date of Birth</label>
+        <input type="date" value="2003-03-20">
+        <label>Place of Birth</label>
+        <input type="text" value="CHHATARPUR, M.P">
+        <label>Mother Tongue</label>
+        <input type="text" value="HINDI">
+        <hr>
+        <label>Nationality</label>
+        <input type="text" value="INDIAN">
+        <label>Religion</label>
+        <input type="text" value="HIDNU">
+        <label>Marital Status</label>
+        <input type="text" value="Single">
+        <hr>
+        <label>Aadhaar No.</label>
+        <input type="text" value="78959686XXXX">
+        <label>Student Mobile</label>
+        <input type="text" value="956991XXXX">
+        <label>Student Email</label>
+        <input type="email" value="abc@gmail.com">
+
+
+        <div class="form-section">
+            <h2>Academic Information</h2>
+
+            <label>Enrollment No.</label>
+            <input type="text" value="EN23CS301722">
+            <label>Scholar No.</label>
+            <input type="text" value="2303539">
+            <label>Course</label>
+            <input type="text" value="B.Tech (CSE)">
+            <label>Section</label>
+            <input type="text" value="CS-M">
+            <label>Year</label>
+            <select>
+                <option>1st</option>
+                <option selected>2nd</option>
+                <option>3rd</option>
+                <option>4th</option>
+            </select>
+            <label>Semester</label>
+            <select>
+                <option>I</option>
+                <option>II</option>
+                <option>III</option>
+                <option selected>IV</option>
+                <option>V</option>
+                <option>VI</option>
+                <option>VII</option>
+                <option>VIII</option>
+            </select>
+
+        </div>
+
+        <div class="form-section">
+            <h2>Parent's Information</h2>
+
+            <label>Father's Name</label>
+            <input type="text" value="VINOD SINGH">
+            <label>Father's Occupation</label>
+            <input type="text" value="FARMER">
+            <label>Father's Mobile</label>
+            <input type="text" value="1234567890">
+            <label>Father's Email</label>
+            <input type="email" value="abc@gmail.com">
+            <hr>
+            <label>Mother's Name</label>
+            <input type="text" value="VINEETA SINGH">
+            <label>Mother's Occupation</label>
+            <input type="text" value="HOUSEWIFE">
+            <label>Mother's Mobile</label>
+            <input type="text" value="1234567890">
+            <label>Mother's Email</label>
+            <input type="email" value="abc@gmail.com">
+            <hr>
+            <label>Address</label>
+            <input type="text" value="VILLAGE- KHAIRADA, POST- GOYRA MUGLI, DISTRICT- BANDA, U.P">
+        </div>
+
+        <div class="form-section">
+            <h2>Emergency Contact</h2>
+            <label>Contact Person</label>
+            <input type="text" value="ABHAY SINGH">
+            <label>Relation</label>
+            <input type="text" value="BROTHER">
+            <label>Contact No.</label>
+            <input type="text" value="1234567890">
+            <label>Address</label>
+            <input type="text" value="Bhopal, M.P">
+        </div>
+
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Medicaps University - Online Student Information System
+    </div>
+</body>
+
+</html>

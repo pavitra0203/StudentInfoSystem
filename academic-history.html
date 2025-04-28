@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Academic History - MediCaps University</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #2e1515;
+    }
+
+    .header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-left img {
+      height: 42px;
+      margin-right: 12px;
+    }
+
+    .header-left h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #1d3557;
+    }
+
+    .logout-btn {
+      text-decoration: none;
+      padding: 6px 12px;
+      background-color: #e53935;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #c62828;
+    }
+
+    .page-title {
+      background-color: #ffffff;
+      padding: 25px;
+      text-align: center;
+      border-bottom: 3px solid #457b9d;
+    }
+
+    .page-title h1 {
+      font-size: 30px;
+      margin: 0;
+      color: #1d3557;
+      font-weight: bold;
+    }
+
+    .history-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .semester-select {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .semester-select select {
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    .subject-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .subject-table th,
+    .subject-table td {
+      padding: 14px 16px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+    }
+
+    .subject-table th {
+      background-color: #36598a;
+      color: white;
+    }
+
+    .subject-table tr:hover {
+      background-color: #f2f6fa;
+    }
+
+    .info-box {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 10px;
+      background: #eaf3fc;
+      border-left: 6px solid #457b9d;
+      color: #1d3557;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .history-container {
+        margin: 15px;
+        padding: 20px;
+      }
+
+      .page-title h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <img src="./Assets:Images/medicapsuniversity.jpeg" alt="MediCaps Logo">
+      <h2>MediCaps University</h2>
+    </div>
+    <a href="./login.html" class="logout-btn">Log Out</a>
+  </div>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>🎓 Academic History</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div class="history-container">
+
+    <!-- Semester Dropdown -->
+    <div class="semester-select">
+      <label for="semester">Select Semester:</label>
+      <select id="semester">
+        <option value="1" selected>Semester 1</option>
+        <option value="2">Semester 2</option>
+        <option value="3">Semester 3</option>
+
+      </select>
+    </div>
+
+    <!-- Semester Content -->
+    <div id="semesterData">
+      <!-- Static content for each semester -->
+      <h2>Semester 1</h2>
+      <table class="subject-table">
+        <tr>
+          <th>Subject</th>
+          <th>Grade</th>
+          <th>Credits</th>
+        </tr>
+        <tr>
+          <td>Mathematics-I</td>
+          <td>A</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Physics</td>
+          <td>B+</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Programming Fundamentals</td>
+          <td>A+</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Communication Skills</td>
+          <td>B</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Workshop</td>
+          <td>A</td>
+          <td>2</td>
+        </tr>
+      </table>
+      <div class="info-box">✅ You completed 5 subjects with a total of 16 credits in Semester 1.</div>
+
+      <h2>Semester 2</h2>
+      <table class="subject-table">
+        <tr>
+          <th>Subject</th>
+          <th>Grade</th>
+          <th>Credits</th>
+        </tr>
+        <tr>
+          <td>Mathematics-II</td>
+          <td>A+</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Chemistry</td>
+          <td>B+</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Data Structures</td>
+          <td>A</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Environmental Science</td>
+          <td>A</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Basic Electronics </td>
+          <td>B</td>
+          <td>3</td>
+        </tr>
+      </table>
+      <div class="info-box">✅ You completed 5 subjects with a total of 17 credits in Semester 2.</div>
+
+      <h2>Semester 3</h2>
+      <table class="subject-table">
+        <tr>
+          <th>Subject</th>
+          <th>Grade</th>
+          <th>Credits</th>
+        </tr>
+        <tr>
+          <td>Discrete Mathematics</td>
+          <td>A</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>OOPs</td>
+          <td>A+</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Digital Electronics</td>
+          <td>B+</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Database Management System</td>
+          <td>A</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Operating System</td>
+          <td>A</td>
+          <td>4</td>
+        </tr>
+      </table>
+      <div class="info-box">✅ You completed 5 subjects with a total of 19 credits in Semester 3.</div>
+
+      <!-- Additional semester content can follow the same pattern... -->
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Medicaps University - Online Student Information System
+  </div>
+
+</body>
+
+</html>

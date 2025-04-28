@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fee Transaction Status - MediCaps University</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #2e1515;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    .header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-left img {
+      height: 42px;
+      margin-right: 12px;
+    }
+
+    .header-left h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #1d3557;
+    }
+
+    .logout-btn {
+      text-decoration: none;
+      padding: 6px 12px;
+      background-color: #e53935;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #c62828;
+    }
+
+    /* Page Title */
+    .page-title {
+      background-color: #ffffff;
+      padding: 25px;
+      text-align: center;
+      border-bottom: 3px solid #457b9d;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      margin-bottom: 30px;
+    }
+
+    .page-title h1 {
+      font-size: 32px;
+      margin: 0;
+      color: #1d3557;
+      font-weight: bold;
+    }
+
+    /* Status Box */
+    .status-container {
+      max-width: 700px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .status-container h3 {
+      text-align: center;
+      color: #2d6a99;
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+
+    .status-field {
+      margin-bottom: 18px;
+    }
+
+    .status-field label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .status-field input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      background-color: #f9f9f9;
+    }
+
+    /* Classy Receipt Style */
+    .receipt-container {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding: 25px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e0e0e0;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .receipt-container h3 {
+      text-align: center;
+      color: #2d6a99;
+      font-size: 24px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .receipt-container table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .receipt-container th,
+    .receipt-container td {
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .receipt-container th {
+      background-color: #a9bcca;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+
+    .receipt-container td {
+      background-color: #f9f9f9;
+    }
+
+    .receipt-container td:last-child {
+      text-align: right;
+    }
+
+    .receipt-container .total {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1d3557;
+      padding-top: 20px;
+      text-align: right;
+      border-top: 2px solid #ddd;
+    }
+
+    .receipt-container .note {
+      margin-top: 20px;
+      font-style: italic;
+      color: #888;
+      text-align: center;
+    }
+
+    .success {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .fail {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .status-container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <img src="./Assets:Images/medicapsuniversity.jpeg" alt="MediCaps Logo">
+      <h2>MediCaps University</h2>
+    </div>
+    <a href="./login.html" class="logout-btn">Log Out</a>
+  </div>
+
+  <!-- Title -->
+  <div class="page-title">
+    <h1>💳 Online Fee Transaction Status</h1>
+  </div>
+
+  <!-- Status Container -->
+  <div class="status-container">
+    <h3>Transaction Details</h3>
+
+    <div class="status-field">
+      <label>Student Name:</label>
+      <input type="text" value="Pavitra Singh" readonly>
+    </div>
+
+    <div class="status-field">
+      <label>Roll Number:</label>
+      <input type="text" value="EN23CS301722" readonly>
+    </div>
+
+    <div class="status-field">
+      <label>Transaction ID:</label>
+      <input type="text" value="TXN00567891" readonly>
+    </div>
+
+    <div class="status-field">
+      <label>Amount Paid:</label>
+      <input type="text" value="₹82,500" readonly>
+    </div>
+
+    <div class="status-field">
+      <label>Date of Transaction:</label>
+      <input type="text" value="2025-04-12" readonly>
+    </div>
+
+    <div class="status-field">
+      <label>Status:</label>
+      <input type="text" value="Success" readonly>
+      <div class="success">✅ Payment Successful</div>
+    </div>
+  </div>
+
+  <!-- Classy Receipt Section -->
+  <div class="receipt-container">
+    <h3>Transaction Receipt</h3>
+    <table>
+      <tr>
+        <th>Student Name</th>
+        <td>Pavitra Singh</td>
+      </tr>
+      <tr>
+        <th>Roll Number</th>
+        <td>EN23CS301722</td>
+      </tr>
+      <tr>
+        <th>Transaction ID</th>
+        <td>TXN00567891</td>
+      </tr>
+      <tr>
+        <th>Amount Paid</th>
+        <td>₹82,500</td>
+      </tr>
+      <tr>
+        <th>Date of Transaction</th>
+        <td>2025-04-12</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td>Success</td>
+      </tr>
+    </table>
+    <div class="total">Total Paid: ₹82,500</div>
+    <div class="note">Thank you for your payment. If you have any questions, please contact the university support.
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Medicaps University - Online Student Information System
+  </div>
+
+</body>
+
+</html>

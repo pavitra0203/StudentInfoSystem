@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Desk</title>
+    <style>
+        html,body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #2e1515;
+        }
+
+        header {
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon {
+            height: 35px;
+            border-radius: 50%;
+        }
+
+        .logout-btn {
+            text-decoration: none;
+            padding: 6px 12px;
+            background-color: #e53935;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #c62828;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .container1 {
+            flex: 1;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .link-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .link-list li img {
+            margin-right: 10px;
+            width: 25px;
+        }
+
+        .link-list a {
+            color: #2a2a2a;
+            text-decoration: none;
+        }
+
+        .link-list a:hover {
+            color: #1976d2;
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: #f48fb1;
+            font-weight: bold;
+        }
+
+        .dark-box {
+            background: #1e2a50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: bottom;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./Assets:Images/medicapslogo.svg" alt="Logo">
+            <h2>MediCaps University</h2>
+        </div>
+        <div class="header-right">
+            <img class="icon" src="./Assets:Images/medicapslogo.svg" alt="User" />
+            <a href="./login.html" class="logout-btn">Log Out</a>
+        </div>
+    </header>
+
+    <div class="container1">
+        <div class="dark-box">
+            📝 Welcome to Medicaps University
+        </div>
+
+        <div class="card">
+            <div class="section-title">Student's  Information</div>
+            <ul class="link-list">
+                <li><img src="./Assets:Images/listlogo.png"><a href="./profile.html">YOUR PROFILE</a></li>
+                <li><img src="./Assets:Images/listlogo.png"><a href="./academic-calender.html">ACADEMIC CALENDAR</a></li>
+                <li><img src="./Assets:Images/listlogo.png"><a href="./academic-history.html">ACADEMIC HISTORY</a></li>
+                <li><img src="./Assets:Images/listlogo.png"><a href="./fees-details.html">ONLINE FEE TRANSACTION STATUS</a></li>
+                <li><img src="./Assets:Images/listlogo.png"><a href="./fees-reciept.html">FEES RECEIPT</a></li>
+                <li><img src="./Assets:Images/listlogo.png"><a href="./student-ledger.html">STUDENT LEDGER</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Medicaps University - Online Student Information System
+    </div>
+
+</body>
+
+</html>
